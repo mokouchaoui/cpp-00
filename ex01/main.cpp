@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doreshev <doreshev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mokoucha <mokoucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 13:44:30 by doreshev          #+#    #+#             */
-/*   Updated: 2022/09/12 17:53:37 by doreshev         ###   ########.fr       */
+/*   Created: 2022/10/15 04:36:15 by mokoucha          #+#    #+#             */
+/*   Updated: 2022/10/15 06:12:13 by mokoucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-int	main(void)
+int main(void)
 {
-	Phonebook	p_book;
-	std::string	line;
-	bool		j;
+	Phonebook c_phone;
+	std::string input;
+	int	loop;
 
-	j = true;
-	while (j == true)
+	loop = 1;
+	while (loop == 1)
 	{
-		std::cout << "PHONEBOOK: ";
-		std::getline(std::cin, line);
-		if (line.compare("ADD") == 0)
-			p_book.ft_add();
-		else if (line.compare("SEARCH") == 0)
-			p_book.ft_search();
-		else if (line.compare("EXIT") == 0)
-			j = false;
+		std::cout << "WELCOME TO PHONE PHONEBOOK PLEASE ENTER YOUR CHOISE : \n";
+		std::getline(std::cin, input);
+		if (input.compare("ADD") == 0)
+			c_phone.ft_add();
+		else if (input.compare("SEARCH") == 0)
+			c_phone.ft_search();
+		else if (input.compare("EXIT") == 0)
+			loop = 0;
 	}
 	return (0);
 }

@@ -3,37 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doreshev <doreshev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mokoucha <mokoucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 13:30:56 by doreshev          #+#    #+#             */
-/*   Updated: 2022/09/12 17:46:54 by doreshev         ###   ########.fr       */
+/*   Created: 2022/10/15 05:15:36 by mokoucha          #+#    #+#             */
+/*   Updated: 2022/10/15 06:00:00 by mokoucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
-# define CONTACT_HPP
+#define CONTACT_HPP
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
 
 class Contact {
 	public:
 		Contact(void);
 		~Contact(void);
-		void		set_contact(int id);
-		std::string	get_id(void);
-		std::string	get_fname(void);
-		std::string	get_lname(void);
-		std::string	get_nickname(void);
-		std::string	get_phone(void);
-		std::string	get_secret(void);
+		void	insert_contact(int id);
+		std::string get_id(void);
+		std::string get_firstname(void);
+		std::string get_lastname(void);
+		std::string get_nickname(void);
+		std::string get_phone(void);
+		std::string get_secret(void);
 	private:
-		std::string	_id;
-		std::string	_fname;
-		std::string	_lname;
-		std::string	_nickname;
-		std::string	_phone;
-		std::string	_secret;
+		std::string _id;
+		std::string _firstname;
+		std::string _lastname;
+		std::string _nickname;
+		std::string _phone;
+		std::string _secret;
 };
 
 #endif

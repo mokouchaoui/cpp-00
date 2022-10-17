@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doreshev <doreshev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mokoucha <mokoucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 13:15:37 by doreshev          #+#    #+#             */
-/*   Updated: 2022/09/12 17:53:06 by doreshev         ###   ########.fr       */
+/*   Created: 2022/10/15 04:44:12 by mokoucha          #+#    #+#             */
+/*   Updated: 2022/10/15 04:48:53 by mokoucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 # include "Contact.hpp"
 
-class Phonebook {
-	public:
+class	Phonebook {
+	public :
 		Phonebook(void);
 		~Phonebook(void);
-		int		index;
-		void	ft_add(void);
-		void	ft_search(void);
+		int i;
+		void ft_add(void);
+		void ft_search(void);
 	private:
-		Contact	contact[8];
-		void	ft_display_contacts(void);
+		Contact contact[8];
+		void  ft_print_contacts(void);
 };
 
 #endif

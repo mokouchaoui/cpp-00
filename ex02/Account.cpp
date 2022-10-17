@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doreshev <doreshev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mokoucha <mokoucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 12:06:17 by doreshev          #+#    #+#             */
-/*   Updated: 2022/09/13 17:39:19 by doreshev         ###   ########.fr       */
+/*   Created: 2022/10/15 06:32:04 by mokoucha          #+#    #+#             */
+/*   Updated: 2022/10/15 07:04:49 by mokoucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Account.hpp"
 #include <iostream>
+#include "Account.hpp"
 
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
-Account::Account( int initial_deposit )
+Account::Account(int initial_deposit)
 {
 	this->_accountIndex = this->_nbAccounts;
-	this->_amount = initial_deposit;
+	this->_amount =  initial_deposit;
 	Account::_nbAccounts++;
 	Account::_totalAmount += initial_deposit;
 	Account::_displayTimestamp();

@@ -3,28 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doreshev <doreshev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mokoucha <mokoucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 13:44:30 by doreshev          #+#    #+#             */
-/*   Updated: 2022/09/26 13:54:48 by doreshev         ###   ########.fr       */
+/*   Created: 2022/07/17 15:35:54 by mokoucha          #+#    #+#             */
+/*   Updated: 2022/10/03 04:50:53 by mokoucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cstring>
+#include <cctype>
+
+int	ft_strlen(char *str)
+{
+	int i = 0;
+
+	while (str[i])
+		i++;
+	return (i);
+}
+
+int ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
 
 int	main(int argc, char **argv)
 {
-	int	i;
-	int	j;
-
 	if (argc == 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	else
-	{
-		for (i = 1; i < argc; i++)
-			for (j = 0; argv[i][j]; j++)
-				std::cout << static_cast<char>(toupper(argv[i][j]));
-	}
+	for (int i = 1; i < argc; i++)
+		for (int j = 0; j < (int)ft_strlen(argv[i]); j++)
+			std::cout << (char)ft_toupper(argv[i][j]);
 	std::cout << std::endl;
-	return (0);
+	return 0;
 }
